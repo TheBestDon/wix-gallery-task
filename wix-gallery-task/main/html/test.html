@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Wix javascript test</title>
   <meta charset="utf-8">
@@ -24,9 +25,11 @@
     // Global maps for classes and static data
     var CLASSES = {};
     var DATA = {};
+    var MODULES = {};
   </script>
 
   <script src="../resources/static-images-db.js"></script>
+  <script src="../javascript/static.js"></script>
   <script src="../javascript/ImageFinder.js"></script>
   <script src="../javascript/Gallery.js"></script>
 
@@ -36,7 +39,7 @@
 
     var imageFinder = new ImageFinderClass();
 
-    window.onload = function() {
+    window.onload = function () {
       var gallery = new GalleryClass(imageFinder);
       gallery.addToNode(document.body);
 
@@ -44,7 +47,9 @@
     };
   </script>
 </head>
+
 <body>
 
 </body>
+
 </html>
