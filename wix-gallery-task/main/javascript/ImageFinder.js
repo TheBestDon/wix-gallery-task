@@ -1,23 +1,24 @@
-(function () {
+(function() {
+  var ImageFinder = (window.CLASSES.ImageFinder = function() {});
 
-  var ImageFinder = window.CLASSES.ImageFinder = function () {};
+  ImageFinder.prototype.search = function(query) {
+    const pictures = window.DATA.staticImagesDb;
+    const images = [];
 
-  ImageFinder.prototype.search = function (query) {
+    const filteredPictures = pictures.filter(picture => {
+      return picture.title.toLowerCase().indexOf(query.toLowerCase()) > -1;
+    });
+
+    filteredPictures.forEach(picture => {
+      return images.push({
+        id: picture.id,
+        url: picture.url,
+        title: picture.title
+      });
+    });
     return {
-      query: 'demo',
-      images: [
-        {
-          id:'1',
-          url:'http://image.shutterstock.com/display_pic_with_logo/347836/99127196/stock-photo-demo-icon-99127196.jpg',
-          title:'demo image 1'
-        },
-        {
-          id:'2',
-          url:'http://t2.ftcdn.net/jpg/00/30/42/21/400_F_30422159_lzSKGlGNX1YcKGuIFDiEyZbmCF3hacIB.jpg',
-          title:'demo image 2'
-        }
-      ]
+      query,
+      images
     };
-  }
-
+  };
 })();
