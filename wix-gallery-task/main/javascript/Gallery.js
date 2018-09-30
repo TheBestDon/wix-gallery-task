@@ -80,6 +80,16 @@
     this._queryInputNode = document.createElement('input');
     this._controlsNode.appendChild(this._queryInputNode);
 
+    this._queryInputNodeSelect = document.createElement('select');
+    this._querySelectNode1 = document.createElement('option');
+    this._querySelectNode1.innerHTML = 'static';
+    this._querySelectNode2 = document.createElement('option');
+    this._querySelectNode2.innerHTML = 'flickr';
+
+    this._queryInputNodeSelect.appendChild(this._querySelectNode1);
+    this._queryInputNodeSelect.appendChild(this._querySelectNode2);
+    this._controlsNode.appendChild(this._queryInputNodeSelect);
+
     this._searchBtnNode = document.createElement('button');
     this._searchBtnNode.innerHTML = 'search';
     this._controlsNode.appendChild(this._searchBtnNode);
