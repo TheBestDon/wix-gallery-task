@@ -13,8 +13,5 @@ window.MODULES.static = function(query) {
       title: picture.title
     });
   });
-  return {
-    query,
-    images
-  };
+  return images;
 };
