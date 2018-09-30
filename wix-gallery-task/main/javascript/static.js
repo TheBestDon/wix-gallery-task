@@ -1,4 +1,4 @@
-window.MODULES.Static = function(query) {
+window.MODULES.static = function(query) {
   const pictures = window.DATA.staticImagesDb;
   const images = [];
 
