@@ -14,8 +14,8 @@
    * @param {String} query - search term to look for
    * @param {String} moduleId - serch module number
    */
-  Gallery.prototype.doSearch = function(query, moduleId) {
-    var searchResults = this._imageFinder.search(query, moduleId);
+  Gallery.prototype.doSearch = async function(query, moduleId) {
+    var searchResults = await this._imageFinder.search(query, moduleId);
     this._onSearchResultReady(searchResults);
   };
 
@@ -24,7 +24,8 @@
    */
   Gallery.prototype._onSearchButtonClick = function(e) {
     var query = this._queryInputNode.value;
-    this.doSearch(query);
+    var moduleId = this._queryInputNodeSelect.value;
+    this.doSearch(query, moduleId);
   };
 
   /**
