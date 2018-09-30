@@ -33,7 +33,7 @@ describe('Task 3 - Async Flickr Module', function() {
           'check that results.images is an Array'
         ).toBeTruthy();
         console.log(results.images.length);
-        expect(results.images.length).toBe(96);
+        expect(results.images.length).toBe(100);
 
         // ToDo: add more specific tests
       });

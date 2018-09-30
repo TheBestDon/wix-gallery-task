@@ -29,7 +29,6 @@ describe('Task 5 - Nuts & Bolts', function() {
         expect(gallery._onSearchResultReady.callCount).toBe(1);
 
         expect(results.query, 'check result query').toBe('dogs');
-        console.log(results.query);
       });
     });
   });
