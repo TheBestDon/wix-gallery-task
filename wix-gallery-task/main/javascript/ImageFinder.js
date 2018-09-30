@@ -6,6 +6,9 @@
       case 'static':
         return window.MODULES.static(query);
 
+      case 'flickr':
+        return window.MODULES.flickr(query);
+
       default:
         throw Error('Search module is not found.');
     }

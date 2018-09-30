@@ -1,4 +1,4 @@
-window.MODULES.Flickr = async function(query) {
+window.MODULES.flickr = async function(query) {
   const opts = {
     api_key: 'b394136d5dde8d9d0d4f8fc6685386e2'
   };
